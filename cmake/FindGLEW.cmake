@@ -25,6 +25,9 @@ ELSE (WIN32)
         /usr/local/include
         /sw/include
         /opt/local/include
+        /opt/homebrew/Cellar/glew/2.2.0_1/include/GL/glew.h
+        /opt/homebrew/include/GL/glew.h
+        /opt/local/include/GL/glew.h
         DOC "The directory where GL/glew.h resides")
     FIND_LIBRARY( GLEW_LIBRARY
         NAMES GLEW glew
@@ -35,6 +38,7 @@ ELSE (WIN32)
         /usr/local/lib
         /sw/lib
         /opt/local/lib
+        /opt/homebrew/Cellar/glew/2.2.0_1/lib
         DOC "The GLEW library")
 ENDIF (WIN32)
 
