@@ -22,6 +22,9 @@ PRIVATE
     ${CMAKE_CURRENT_BINARY_DIR}/shaders.cpp
 )
 
+list(APPEND CMAKE_PREFIX_PATH "/opt/homebrew/Cellar/glew/2.2.0_1")
+    find_package(GLEW REQUIRED QUIET)
+
 find_package (Eigen3 REQUIRED QUIET)
 message(STATUS "Found Eigen: '${EIGEN3_INCLUDE_DIRS}'")
 target_compile_definitions(${COMPONENT} PUBLIC HAVE_EIGEN HAVE_GLEW)
